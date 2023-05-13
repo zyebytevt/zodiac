@@ -188,12 +188,12 @@ private static:
 
         lib.grLibrary.addFunction(&grPrepareSize, "prepare", [grInt, grInt]);
         lib.grLibrary.addFunction(&grPrepareImage, "prepare", [grString]);
-        lib.grLibrary.addFunction(&grDrawText, "drawText", [grInt, grInt, grString, lib.grFont, grString, lib.grAlign]);
+        lib.grLibrary.addFunction(&grDrawText, "drawText", [grInt, grInt, grString, grPure(lib.grFont), grString, lib.grAlign]);
         lib.grLibrary.addFunction(&grFormatTime, "formatTime", [grString, grUInt], [grString]);
         lib.grLibrary.addFunction(&grGetEvents, "getEvents", [grInt], [grList(lib.grEvent)]);
-        lib.grLibrary.addFunction(&grDrawImageSimple, "drawImage", [grInt, grInt, lib.grImage]);
-        lib.grLibrary.addFunction(&grDrawImageScaled, "drawImage", [grInt, grInt, lib.grImage, grInt, grInt]);
-        lib.grLibrary.addFunction(&grDrawImageRegion, "drawImage", [grInt, grInt, lib.grImage, grInt, grInt,
+        lib.grLibrary.addFunction(&grDrawImageSimple, "drawImage", [grInt, grInt, grPure(lib.grImage)]);
+        lib.grLibrary.addFunction(&grDrawImageScaled, "drawImage", [grInt, grInt, grPure(lib.grImage), grInt, grInt]);
+        lib.grLibrary.addFunction(&grDrawImageRegion, "drawImage", [grInt, grInt, grPure(lib.grImage), grInt, grInt,
             grInt, grInt, grInt, grInt]);
 
         immutable startUnixTime = cast(uint) SysTime(sScheduleStart, UTC()).toUnixTime();

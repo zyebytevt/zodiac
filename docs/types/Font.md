@@ -13,7 +13,7 @@ The `Font` class is a data structure that represents a font. It is used for spec
 
 ## Example Usage
 
-```d
+```grimoire
 var font: Font = @Font("path/to/font.ttf", 16);
 ```
 

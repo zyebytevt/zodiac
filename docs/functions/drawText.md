@@ -4,8 +4,8 @@ The `drawText` function allows you to draw text onto the generated image. This f
 
 ## Method Signature
 
-```d
-drawText(x: int, y: int, text: string, font: Font, color: string, alignment: Align)
+```grimoire
+drawText(x: int, y: int, text: string, font: pure Font, color: string, alignment: Align)
 ```
 
 ## Parameters
@@ -19,7 +19,9 @@ drawText(x: int, y: int, text: string, font: Font, color: string, alignment: Ali
 
 ## Example Usage
 
-```d
+```grimoire
+const font: pure Font = @Font("path/to/font.ttf", 32);
+
 drawText(100, 200, "Hello, World!", font, "#FF0000", Align.middleCenter);
 ```
 

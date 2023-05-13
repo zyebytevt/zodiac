@@ -4,8 +4,8 @@ The `drawImage` function is used to draw an image onto the drawing canvas at the
 
 ## Function Signature
 
-```d
-drawImage(x: int, y: int, image: Image, [width: int, height: int,] [srcX: int, srcY: int, srcW: int, srcH: int]);
+```grimoire
+drawImage(x: int, y: int, image: pure Image, [width: int, height: int,] [srcX: int, srcY: int, srcW: int, srcH: int]);
 ```
 
 ## Parameters
@@ -29,8 +29,8 @@ drawImage(x: int, y: int, image: Image, [width: int, height: int,] [srcX: int, s
 
 ## Example Usage
 
-```d
-var image: Image = @Image("path/to/image.png");
+```grimoire
+const image: pure Image = @Image("path/to/image.png");
 
 // Draw the entire image at position (100, 100) without scaling
 drawImage(100, 100, image);
