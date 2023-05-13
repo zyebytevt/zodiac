@@ -4,7 +4,7 @@ The `Event` class is a data structure that represents an event. It contains prop
 
 ## Class Declaration
 
-```cpp
+```d
 class Event {
     name: string;
     description: string;
@@ -22,7 +22,7 @@ class Event {
 
 ## Example Usage
 
-```cpp
+```d
 var event: Event = @Event {
     name = "Birthday Party";
     description = "Celebrate my birthday with friends and family.";

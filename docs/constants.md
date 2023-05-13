@@ -15,7 +15,7 @@ These constants can be used in your script to reference the specific time range 
 
 ## Example Usage
 
-```cpp
+```d
 // Get the current time
 var eventTime: uint = getEvents(0)[0].startsAt;
 

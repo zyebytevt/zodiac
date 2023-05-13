@@ -4,7 +4,7 @@ The `drawImage` function is used to draw an image onto the drawing canvas at the
 
 ## Function Signature
 
-```cpp
+```d
 drawImage(x: int, y: int, image: Image, [width: int, height: int,] [srcX: int, srcY: int, srcW: int, srcH: int]);
 ```
 
@@ -29,7 +29,7 @@ drawImage(x: int, y: int, image: Image, [width: int, height: int,] [srcX: int, s
 
 ## Example Usage
 
-```cpp
+```d
 var image: Image = @Image("path/to/image.png");
 
 // Draw the entire image at position (100, 100) without scaling
