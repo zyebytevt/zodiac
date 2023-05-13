@@ -10,6 +10,8 @@ class Event {
     description: string;
     startsAt: uint;
     endsAt: uint;
+    userdata1: string;
+    userdata2: string;
 }
 ```
 
@@ -19,6 +21,8 @@ class Event {
 - `description` (type: `string`): Represents a description or additional information about the event.
 - `startsAt` (type: `uint`): Represents the start time of the event. It is stored as a 32-bit Unix timestamp, indicating the number of seconds since January 1, 1970, 00:00:00 UTC.
 - `endsAt` (type: `uint`): Represents the end time of the event. It is also stored as a 32-bit Unix timestamp.
+- `userdata1` (type: `string`): Represents a custom user-set string value.
+- `userdata2` (type: `string`): Represents a custom user-set string value.
 
 ## Example Usage
 
@@ -37,3 +41,4 @@ In this example, an `Event` object is created and initialized with a name, descr
 
 - The start and end times of the event are represented as 32-bit Unix timestamps. These timestamps are commonly used to store and manipulate date and time information.
 - The `startsAt` and `endsAt` properties can be converted to human-readable date and time strings using the `formatTime` function.
+- `userdata1` and `userdata2` are set while creating events.
