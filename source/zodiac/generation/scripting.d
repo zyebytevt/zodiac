@@ -84,6 +84,8 @@ private static:
             obj.setString("description", dto.description);
             obj.setUInt("startsAt", cast(uint) SysTime(dto.starts_at, UTC()).toUnixTime());
             obj.setUInt("endsAt", cast(uint) SysTime(dto.ends_at, UTC()).toUnixTime());
+            obj.setString("userdata1", dto.userdata1);
+            obj.setString("userdata2", dto.userdata2);
 
             return obj;
         }
@@ -179,8 +181,8 @@ private static:
             "bottomLeft", "bottomCenter", "bottomRight"]);
 
         lib.grFont = lib.grLibrary.addNative("Font");
-        lib.grEvent = lib.grLibrary.addClass("Event", ["name", "description", "startsAt", "endsAt"],
-            [grString, grString, grUInt, grUInt]);
+        lib.grEvent = lib.grLibrary.addClass("Event", ["name", "description", "startsAt", "endsAt", "userdata1",
+            "userdata2"], [grString, grString, grUInt, grUInt, grString, grString]);
         lib.grImage = lib.grLibrary.addNative("Image");
 
         lib.grLibrary.addConstructor(&grFontCtor, lib.grFont, [grString, grInt]);

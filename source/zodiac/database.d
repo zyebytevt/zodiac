@@ -52,7 +52,9 @@ public static:
             name VARCHAR(100) NOT NULL,
             description VARCHAR(200) NULL,
             starts_at DATETIME NOT NULL,
-            ends_at DATETIME NOT NULL
+            ends_at DATETIME NOT NULL,
+            userdata1 VARCHAR(255) NULL,
+            userdata2 VARCHAR(255) NULL
         );`);
     }
 
@@ -103,4 +105,6 @@ struct EventDTO
     string description;
     DateTime starts_at;
     DateTime ends_at;
+    string userdata1;
+    string userdata2;
 }
