@@ -87,7 +87,7 @@ private static:
 
             return obj;
         }
-
+        
         GrList result = new GrList();
         foreach (EventDTO ev; events)
             result.pushBack(GrValue(convertDTO(ev)));
@@ -187,10 +187,11 @@ private static:
         lib.grLibrary.addConstructor(&grImageCtor, lib.grImage, [grString]);
 
         lib.grLibrary.addFunction(&grPrepareSize, "prepare", [grInt, grInt]);
-        lib.grLibrary.addFunction(&grPrepareImage, "prepare", [grString]);
-        lib.grLibrary.addFunction(&grDrawText, "drawText", [grInt, grInt, grString, grPure(lib.grFont), grString, lib.grAlign]);
-        lib.grLibrary.addFunction(&grFormatTime, "formatTime", [grString, grUInt], [grString]);
-        lib.grLibrary.addFunction(&grGetEvents, "getEvents", [grInt], [grList(lib.grEvent)]);
+        lib.grLibrary.addFunction(&grPrepareImage, "prepare", [grPure(grString)]);
+        lib.grLibrary.addFunction(&grDrawText, "drawText", [grInt, grInt, grPure(grString), grPure(lib.grFont),
+            grPure(grString), lib.grAlign]);
+        lib.grLibrary.addFunction(&grFormatTime, "formatTime", [grPure(grString), grUInt], [grString]);
+        lib.grLibrary.addFunction(&grGetEvents, "getEvents", [grInt], [grList(grPure(lib.grEvent))]);
         lib.grLibrary.addFunction(&grDrawImageSimple, "drawImage", [grInt, grInt, grPure(lib.grImage)]);
         lib.grLibrary.addFunction(&grDrawImageScaled, "drawImage", [grInt, grInt, grPure(lib.grImage), grInt, grInt]);
         lib.grLibrary.addFunction(&grDrawImageRegion, "drawImage", [grInt, grInt, grPure(lib.grImage), grInt, grInt,

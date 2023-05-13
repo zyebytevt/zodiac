@@ -1,11 +1,11 @@
-# `drawText` Function
+# Function `drawText`
 
 The `drawText` function allows you to draw text onto the generated image. This function takes several parameters to specify the text position, font, color, and alignment.
 
 ## Method Signature
 
 ```grimoire
-drawText(x: int, y: int, text: string, font: pure Font, color: string, alignment: Align)
+drawText(x: int, y: int, text: pure string, font: pure Font, color: pure string, alignment: Align)
 ```
 
 ## Parameters

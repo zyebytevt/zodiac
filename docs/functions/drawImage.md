@@ -1,4 +1,4 @@
-# `drawImage` Function
+# Function `drawImage`
 
 The `drawImage` function is used to draw an image onto the drawing canvas at the specified coordinates. It allows scaling and specifying a sub-region of the source image to be drawn.
 

@@ -1,11 +1,11 @@
-# `formatTime` Function
+# Function `formatTime`
 
 The `formatTime` function is used to format a Unix timestamp into a human-readable time string according to the provided format string.
 
 ## Function Signature
 
 ```grimoire
-formatTime(formatString: string, unixTimestamp: uint) (string);
+formatTime(formatString: pure string, unixTimestamp: uint) (string);
 ```
 
 ## Parameters

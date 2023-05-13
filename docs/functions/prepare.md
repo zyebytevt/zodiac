@@ -1,4 +1,4 @@
-# `prepare` Function
+# Function `prepare`
 
 The `prepare` function is used to set up a drawing canvas before performing graphical operations. It has two overloaded variants: one that creates a new drawing canvas with the specified width and height, and another that uses an existing image as the base for the drawing canvas.
 
@@ -6,7 +6,7 @@ The `prepare` function is used to set up a drawing canvas before performing grap
 
 ```grimoire
 prepare(width: int, height: int);
-prepare(path: string);
+prepare(path: pure string);
 ```
 
 ## Overload Details

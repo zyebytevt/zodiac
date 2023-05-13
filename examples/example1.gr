@@ -1,0 +1,52 @@
+// ZODIAC EXAMPLE 1
+// For more information, please look into the documentation over at
+// https://zyebytevt.github.io/zodiac !
+
+// We load a font with the given path into the constant "MAIN_FONT", so that
+// we can use this later for text drawing operations. Size in pixels can also
+// be set!
+const MAIN_FONT: pure Font = @Font("Micro-Six.ttf", 32);
+
+// This is our "entry point", where the execution of the script starts.
+// We can call our various operations in here.
+event main()
+{
+    // First of all, we need to prepare the canvas we want to draw into.
+    // This one is initialized with a 
+    prepare(1280, 800);
+
+    // We're gonna repeat the following block 7 times, where the variable "i"
+    // starts at 0 and with each repetition increments by one. This results
+    // in a range of 0 to 6.
+    loop (i: int, 7)
+    {
+        // Let's fetch all the events for the given day. It can theoretically
+        // be more than one, but for this example we're only going to use
+        // the first one returned. Note that they are "pure", which means
+        // that the events themselves cannot be edited.
+        const events: list<pure Event> = getEvents(i);
+
+        // But first, let's check if the list is empty, meaning there are no events
+        // on that day.
+        if (events.isEmpty)
+        {
+            // Let's draw the offline text!
+            drawText(100, 100 + i * 100, "Offline!", MAIN_FONT, "#888888", Align.topLeft);
+        }
+        else
+        {
+            // Otherwise, let's fetch the first element of the list and write the name
+            // and start time of that event.
+            const ev: pure Event = events[0];
+
+            // "formatTime" is responsible for converting the given timestamp
+            // "ev.startsAt" into human readable text. This format string would, for
+            // example, generate a text like "21:34:22".
+            const timeText: pure string = formatTime("HH:mm:ss", ev.startsAt);
+
+            // And finally, let's draw the text onto the canvas.
+            drawText(100, 100 + i * 100, ev.name, MAIN_FONT, "#ffffff", Align.topLeft);
+            drawText(100, 140 + i * 100, timeText, MAIN_FONT, "#ffffff", Align.topLeft);
+        }
+    }
+}
