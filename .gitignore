@@ -1,7 +1,6 @@
 .dub
 docs.json
 __dummy.html
-docs/
 /stream-scheduler
 stream-scheduler.so
 stream-scheduler.dylib
