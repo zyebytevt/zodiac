@@ -4,7 +4,7 @@ The `formatTime` function is used to format a Unix timestamp into a human-readab
 
 ## Function Signature
 
-```cpp
+```d
 formatTime(formatString: string, unixTimestamp: uint) (string);
 ```
 
@@ -49,7 +49,7 @@ The format string can contain various placeholders that will be replaced with th
 
 ## Example Usage
 
-```cpp
+```d
 var timestamp: uint = 1620954321;
 var formattedTime: string = formatTime("yyyy-mm-dd HH:ii:ss", timestamp);
 ```

@@ -4,7 +4,7 @@ The `getEvents` function allows you to retrieve a list of events for a specific 
 
 ## Method Signature
 
-```cpp
+```d
 getEvents(dayIndex: int) (list<Event>)
 ```
 
@@ -18,7 +18,7 @@ The `getEvents` function returns a list of `Event` objects representing the even
 
 ## Example Usage
 
-```cpp
+```d
 var events: list<Event> = getEvents(2);
 ```
 

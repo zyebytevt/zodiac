@@ -13,7 +13,7 @@ The `Font` class is a data structure that represents a font. It is used for spec
 
 ## Example Usage
 
-```cpp
+```d
 var font: Font = @Font("path/to/font.ttf", 16);
 ```
 

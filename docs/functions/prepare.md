@@ -4,7 +4,7 @@ The `prepare` function is used to set up a drawing canvas before performing grap
 
 ## Method Signatures
 
-```cpp
+```d
 prepare(width: int, height: int);
 prepare(path: string);
 ```
@@ -26,7 +26,7 @@ This overload uses an existing image as the base for the drawing canvas.
 
 ## Example Usage
 
-```cpp
+```d
 // Variant 1: Create a new drawing canvas
 prepare(800, 600);
 

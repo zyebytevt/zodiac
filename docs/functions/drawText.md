@@ -4,7 +4,7 @@ The `drawText` function allows you to draw text onto the generated image. This f
 
 ## Method Signature
 
-```cpp
+```d
 drawText(x: int, y: int, text: string, font: Font, color: string, alignment: Align)
 ```
 
@@ -19,7 +19,7 @@ drawText(x: int, y: int, text: string, font: Font, color: string, alignment: Ali
 
 ## Example Usage
 
-```cpp
+```d
 drawText(100, 200, "Hello, World!", font, "#FF0000", Align.middleCenter);
 ```
 

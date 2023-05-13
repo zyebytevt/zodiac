@@ -12,7 +12,7 @@ The `Image` class is a data structure represents an image. It is used for loadin
 
 ## Example Usage
 
-```cpp
+```d
 var image: Image = @Image("path/to/image.png");
 ```
 

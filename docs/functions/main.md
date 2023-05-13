@@ -4,7 +4,7 @@ The `event main()` function serves as the entry point for executing the drawing 
 
 ## Event Signature
 
-```cpp
+```d
 event main();
 ```
 
@@ -20,7 +20,7 @@ The `event main()` function can be used to define the logic of what should be dr
 
 Here's an example of a basic `event main()` function:
 
-```cpp
+```d
 event main()
 {
     prepare(400, 300);
