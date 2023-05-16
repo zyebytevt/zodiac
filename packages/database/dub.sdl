@@ -1,0 +1,8 @@
+name "database"
+description "Database access for ZODIAC."
+authors "ZyeByte"
+copyright "Copyright © 2023, ZyeByte"
+license "GPL-3.0"
+targetType "sourceLibrary"
+dependency "ddbc" version="~>0.5.7"
+subConfiguration "ddbc" "SQLite"

@@ -13,8 +13,6 @@ import std.string : format;
 
 import ddbc;
 
-import zodiac.app : logVerbose;
-
 struct Database
 {
 protected static:
@@ -40,13 +38,11 @@ protected static:
 public static:
     void open(string path)
     {
-        logVerbose("Loading database %s...", path);
         mConnection = createConnection("ddbc:sqlite:" ~ path);
         
         Statement stmt = mConnection.createStatement();
         scope (exit) stmt.close();
 
-        logVerbose("Creating table 'event' if not existant...");
         stmt.executeUpdate(`CREATE TABLE IF NOT EXISTS event (
             id INTEGER PRIMARY KEY,
             name VARCHAR(100) NOT NULL,
@@ -60,7 +56,6 @@ public static:
 
     void close()
     {
-        logVerbose("Closing database connection...");
         mConnection.close();
     }
 

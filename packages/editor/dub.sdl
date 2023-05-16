@@ -1,0 +1,8 @@
+name "editor"
+description "User-friendly interface for ZODIAC."
+authors "ZyeByte"
+copyright "Copyright © 2023, ZyeByte"
+license "GPL-3.0"
+dependency "dlangui" version="~>0.10.2"
+dependency "zodiac:database" version="*"
+targetType "executable"
